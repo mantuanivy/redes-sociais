@@ -151,6 +151,9 @@ section {
 }
 
 @media (max-height: 600px) {
+  main {
+    padding: 90px 0 18px 0;
+  }
   #user {
     margin-top: 15px;
     margin-bottom: 15px;
