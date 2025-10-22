@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Tree</title>
+    <link rel="stylesheet" href="style.css" />
+     <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="user">
+        <img src="./images/IVY.jpeg" alt="Profile picture" />
+        <a href="https://www.instagram.com/ivy.mantuan" target="_blank">
+          <span>Ivy Mantuany</span>
+        </a>
+      </section>
+
+      <section id="link-list">
+        <a href="https://www.instagram.com/ivy.mantuan" class="link">
+          <span>Instagram</span>
+          <i class="ph-bold ph-instagram-logo"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@ivy.mantuany" class="link">
+          <span>TikTok</span>
+          <i class="ph-bold ph-tiktok-logo"></i>
+        </a>
+
+        <a href="https://wa.me/message/HAYJZPF2R5VBH1" class="link">
+          <span>WhatsApp</span>
+          <i class="ph-bold ph-whatsapp-logo"></i>
+        </a>
+      </section>
+
+      <section id="pix-donation">
+        <div class="donation-card">
+          <h2>💜 Apoie o meu trabalho</h2>
+          <p>Se você gosta do meu conteúdo e quer me apoiar, pode fazer uma contribuição via PIX!</p>
+          <div class="pix-info">
+            <span class="pix-label">Chave PIX:</span>
+            <div class="pix-container">
+              <span class="pix-key" id="pix-key">257.320.578-97</span>
+              <button class="copy-btn" id="copy-btn" onclick="copyPixKey()">
+                <i class="ph-bold ph-copy"></i>
+              </button>
+            </div>
+          </div>
+          <p class="donation-message">Qualquer valor é muito bem-vindo e me ajuda a continuar criando conteúdo! 🙏✨</p>
+        </div>
+      </section>
+    </main>
+    
+    <script>
+      function copyPixKey() {
+        const pixKey = document.getElementById('pix-key').textContent;
+        const copyBtn = document.getElementById('copy-btn');
+        
+        navigator.clipboard.writeText(pixKey).then(function() {
+          // Feedback visual de sucesso
+          copyBtn.innerHTML = '<i class="ph-bold ph-check"></i>';
+          copyBtn.style.background = 'rgba(34, 197, 94, 0.2)';
+          copyBtn.style.borderColor = '#22c55e';
+          
+          // Volta ao estado original após 2 segundos
+          setTimeout(function() {
+            copyBtn.innerHTML = '<i class="ph-bold ph-copy"></i>';
+            copyBtn.style.background = '';
+            copyBtn.style.borderColor = '';
+          }, 2000);
+        }).catch(function(err) {
+          // Fallback para navegadores mais antigos
+          const textArea = document.createElement('textarea');
+          textArea.value = pixKey;
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+          
+          // Feedback visual
+          copyBtn.innerHTML = '<i class="ph-bold ph-check"></i>';
+          setTimeout(function() {
+            copyBtn.innerHTML = '<i class="ph-bold ph-copy"></i>';
+          }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
