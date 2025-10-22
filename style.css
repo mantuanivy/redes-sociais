@@ -12,16 +12,20 @@
 body {
   background-color: var(--background-color);
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 
 a,
@@ -120,6 +124,114 @@ section {
 @media (max-width: 600px) {
   #social-networks {
     gap: 15px;
+  }
+}
+
+/* Responsividade para altura pequena */
+@media (max-height: 700px) {
+  main {
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 10px 0 20px 0;
+  }
+  
+  #user {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #user img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .donation-card {
+    padding: 15px;
+  }
+}
+
+@media (max-height: 600px) {
+  #user {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  #user img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+  
+  .link {
+    margin: 6px 0;
+    padding: 8px 0;
+  }
+  
+  #pix-donation {
+    margin-top: 8px;
+  }
+  
+  .donation-card {
+    padding: 12px;
+  }
+  
+  .donation-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .donation-card p {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-height: 500px) {
+  main {
+    padding: 5px 0 15px 0;
+  }
+  
+  #user {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  #user img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .link {
+    margin: 4px 0;
+    padding: 6px 0;
+  }
+  
+  .link span {
+    font-size: 0.9rem;
+  }
+  
+  #pix-donation {
+    margin-top: 5px;
+  }
+  
+  .donation-card {
+    padding: 10px;
+  }
+  
+  .donation-card h2 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+  
+  .donation-card p {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .pix-info {
+    padding: 8px;
+    margin: 10px 0;
   }
 }
 
