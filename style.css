@@ -55,6 +55,12 @@ section {
   border: 1px solid var(--text-color);
   border-radius: 50%;
   margin-bottom: 22px;
+  animation: profile-glow 3s ease-in-out infinite;
+}
+
+@keyframes profile-glow {
+  0%, 100% { box-shadow: 0 0 10px 2px rgba(187, 153, 221, 0.3); }
+  50%       { box-shadow: 0 0 28px 8px rgba(187, 153, 221, 0.7); }
 }
 
 #user a span {
@@ -79,6 +85,7 @@ section {
   gap: 10px;
   cursor: pointer;
   border-radius: 6px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .link img {
@@ -87,7 +94,8 @@ section {
 }
 
 .link:hover {
-  transform: scale(1.07);
+  box-shadow: 0 0 18px 4px rgba(187, 153, 221, 0.6);
+  border-color: rgba(187, 153, 221, 0.9);
 }
 
 .link span {
@@ -283,7 +291,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  flex-wrap: wrap;
+  
 }
 
 .pix-label {
@@ -349,4 +357,45 @@ section {
   font-size: 0.85rem !important;
   font-style: italic;
   opacity: 0.8 !important;
+}
+
+/* Animations */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#user {
+  animation: fade-in-up 0.6s ease forwards;
+}
+
+.link {
+  opacity: 0;
+  animation: slide-in-right 0.5s ease forwards;
+}
+
+.link:nth-child(1) { animation-delay: 0.3s; }
+.link:nth-child(2) { animation-delay: 0.5s; }
+.link:nth-child(3) { animation-delay: 0.7s; }
+
+#pix-donation {
+  opacity: 0;
+  animation: fade-in-up 0.5s ease 0.95s forwards;
 }
