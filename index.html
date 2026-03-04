@@ -1,10 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ivy Mantuany</title>
+
+    <!-- SEO primário -->
+    <title>Ivy Mantuany | Cantora Profissional</title>
+    <meta name="description" content="Ivy Mantuany é cantora profissional brasileira. Acompanhe seu trabalho musical no Instagram e TikTok, entre em contato pelo WhatsApp e apoie via PIX." />
+    <meta name="keywords" content="Ivy Mantuany, cantora, cantora brasileira, música, artista, shows, entretenimento" />
+    <meta name="author" content="Ivy Mantuany" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph (Facebook, WhatsApp, etc.) -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Ivy Mantuany | Cantora Profissional" />
+    <meta property="og:description" content="Acompanhe o trabalho musical de Ivy Mantuany. Cantora profissional brasileira com presença no Instagram e TikTok." />
+    <meta property="og:image" content="./images/IVY.jpeg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="profile:first_name" content="Ivy" />
+    <meta property="profile:last_name" content="Mantuany" />
+    <meta property="profile:username" content="ivy.mantuan" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ivy Mantuany | Cantora Profissional" />
+    <meta name="twitter:description" content="Acompanhe o trabalho musical de Ivy Mantuany. Cantora profissional brasileira." />
+    <meta name="twitter:image" content="./images/IVY.jpeg" />
+
+    <!-- Dados estruturados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MusicGroup",
+      "name": "Ivy Mantuany",
+      "description": "Cantora profissional brasileira",
+      "image": "./images/IVY.jpeg",
+      "sameAs": [
+        "https://www.instagram.com/ivy.mantuan",
+        "https://www.tiktok.com/@ivy.mantuany"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "booking",
+        "url": "https://wa.me/message/HAYJZPF2R5VBH1"
+      }
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,33 +60,33 @@
   </head>
   <body>
     <main>
-      <section id="user">
+      <section id="user" aria-label="Perfil de Ivy Mantuany">
         <div class="profile-ring">
-          <img src="./images/IVY.jpeg" alt="Profile picture" />
+          <img src="./images/IVY.jpeg" alt="Ivy Mantuany, cantora profissional brasileira" width="120" height="120" />
         </div>
-        <a href="https://www.instagram.com/ivy.mantuan" target="_blank">
+        <a href="https://www.instagram.com/ivy.mantuan" target="_blank" rel="noopener noreferrer" aria-label="Perfil do Instagram de Ivy Mantuany">
           <span>Ivy Mantuany</span>
         </a>
       </section>
 
-      <section id="link-list">
-        <a href="https://www.instagram.com/ivy.mantuan" class="link">
+      <section id="link-list" aria-label="Redes sociais e contato">
+        <a href="https://www.instagram.com/ivy.mantuan" class="link" target="_blank" rel="noopener noreferrer" aria-label="Siga Ivy Mantuany no Instagram">
           <span>Instagram</span>
-          <i class="ph-bold ph-instagram-logo"></i>
+          <i class="ph-bold ph-instagram-logo" aria-hidden="true"></i>
         </a>
 
-        <a href="https://www.tiktok.com/@ivy.mantuany" class="link">
+        <a href="https://www.tiktok.com/@ivy.mantuany" class="link" target="_blank" rel="noopener noreferrer" aria-label="Siga Ivy Mantuany no TikTok">
           <span>TikTok</span>
-          <i class="ph-bold ph-tiktok-logo"></i>
+          <i class="ph-bold ph-tiktok-logo" aria-hidden="true"></i>
         </a>
 
-        <a href="https://wa.me/message/HAYJZPF2R5VBH1" class="link">
+        <a href="https://wa.me/message/HAYJZPF2R5VBH1" class="link" target="_blank" rel="noopener noreferrer" aria-label="Entre em contato com Ivy Mantuany pelo WhatsApp">
           <span>WhatsApp</span>
-          <i class="ph-bold ph-whatsapp-logo"></i>
+          <i class="ph-bold ph-whatsapp-logo" aria-hidden="true"></i>
         </a>
       </section>
 
-      <section id="pix-donation">
+      <section id="pix-donation" aria-label="Apoie Ivy Mantuany via PIX">
         <div class="donation-card">
           <h2>💜 Apoie o meu trabalho</h2>
           <p>Se você gosta do meu conteúdo e quer me apoiar, pode fazer uma contribuição via PIX!</p>
@@ -51,8 +94,8 @@
             <span class="pix-label">Chave PIX:</span>
             <div class="pix-container">
               <span class="pix-key" id="pix-key">257.320.578-97</span>
-              <button class="copy-btn" id="copy-btn" onclick="copyPixKey()">
-                <i class="ph-bold ph-copy"></i>
+              <button class="copy-btn" id="copy-btn" onclick="copyPixKey()" aria-label="Copiar chave PIX">
+                <i class="ph-bold ph-copy" aria-hidden="true"></i>
               </button>
             </div>
           </div>
